@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alarm Clock</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <center id="clock"></center>
+      <form class="form-ele">
+        <div class="input-ele">
+          <input
+            type="number"
+            id="hours"
+            name="hours"
+            min="01"
+            max="12"
+            placeholder="12"
+            required
+          />:
+          <input
+            type="number"
+            id="minutes"
+            name="minutes"
+            min="00"
+            max="59"
+            placeholder="59"
+            required
+          />:
+          <input
+            type="number"
+            id="seconds"
+            name="seconds"
+            min="00"
+            max="59"
+            placeholder="59"
+            required
+          />
+          <select name="meridiem" id="meridiem">
+            <option value="AM">AM</option>
+            <option value="PM">PM</option>
+          </select>
+        </div>
+        <input type="submit" value="Set Alarm" id="set-btn" />
+      </form>
+      <div class="alarm-list">
+        <h3>Alarms</h3>
+        <ul id="alarams"></ul>
+      </div>
+    </div>
+    <script src="./scripts.js"></script>
+  </body>
+</html>
